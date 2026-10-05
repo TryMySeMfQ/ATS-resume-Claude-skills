@@ -1,0 +1,23 @@
+{
+  "skill_name": "resume-ats",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Preciso montar meu currículo do zero. Trabalhei 3 anos como atendente de telemarketing na empresa Vivo, respondendo dúvidas e resolvendo reclamações de clientes. Antes disso fiz 1 ano de estágio no RH de uma empresa de logística, ajudando com recrutamento. Tenho ensino médio completo e um curso técnico em administração (concluído em 2023). Quero aplicar pra vaga de assistente administrativo.",
+      "expected_output": "Um currículo em Markdown, estrutura de coluna única com seções padrão (Resumo, Experiência, Formação, Habilidades), sem tabelas/ícones. O modelo deve perguntar por números/métricas que faltam (quantos atendimentos por dia, quantas vagas recrutadas, etc.) antes de simplesmente inventar ou deixar os bullets genéricos, e os bullets finais devem usar verbo de ação + resultado quantificado sempre que possível.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Tenho um currículo pronto mas ele tem uma tabela de 2 colunas (experiência de um lado, habilidades e foto do outro), ícones ao lado de cada seção e uma barra de progresso visual pro nível de inglês. Queria saber se ele passa num ATS e, se não, me ajuda a arrumar. Aqui está o conteúdo: Nome: Marcos Lima. Experiência: Analista de Suporte Técnico na empresa TechSoft (2021-2024) - resolvia chamados de suporte nível 1 e 2, fazia manutenção de computadores, treinava usuários novos no sistema interno. Formação: Técnico em Informática. Habilidades: Pacote Office, Redes, Suporte técnico. Inglês: intermediário (barra visual 60%).",
+      "expected_output": "O modelo deve identificar e explicar especificamente por que tabela/colunas, ícones, foto e barra de progresso visual são arriscados para ATS, e entregar uma versão reescrita em coluna única, sem esses elementos, com os bullets de experiência convertidos para o formato verbo de ação + resultado quantificado (perguntando pelos números que faltam, como volume de chamados/dia ou redução de tempo de resolução).",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Vi uma vaga de Analista de Marketing Digital Pleno que pede: experiência com SEO, Google Ads, gestão de redes sociais, análise de métricas de campanha (Google Analytics) e trabalho em equipe com designers. Meu currículo atual só fala que eu 'cuidava das redes sociais da empresa' e 'ajudava com campanhas de anúncios'. Como deixo isso mais forte pra passar no ATS dessa vaga?",
+      "expected_output": "O modelo deve extrair as palavras-chave da vaga (SEO, Google Ads, Google Analytics, gestão de redes sociais, trabalho com designers), verificar quais já aparecem literalmente no currículo atual do usuário, reescrever os bullets vagos em resultados quantificados incorporando as palavras-chave de forma honesta (sem inventar ferramentas que o usuário não mencionou ter usado), e alertar se alguma palavra-chave da vaga (ex: Google Analytics) não tem respaldo nenhum na experiência descrita.",
+      "files": []
+    }
+  ]
+}
